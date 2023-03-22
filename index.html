@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation bar with logos and achievements</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			
+		}
+		#logo1{
+			height: 100px;
+			width: 300px;
+            margin-left: 20px;
+		}
+        #logo3{
+            height: 100px;
+            width: 250px;
+        }
+        #logo2{
+            height: 100px;
+            width: 250px;
+        }
+		nav{
+		position: fixed; 
+		width: 90%;
+		background-color: rgb(8, 8, 8);
+		display: flex; 
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 1vw 5vw;
+		box-shadow: 2px 2px 10px rgb(223, 28, 28);
+	}
+    button{
+	 width:300px;
+	 padding:15px 0;
+	 text-align:center;
+	 margin:20px 10px;
+	 border-radius: 25px;
+	 font-weight:bold;
+	 border:2px solid rgb(5, 4, 4);
+	 background:transparent;
+	 color:rgb(22, 20, 20);
+	 cursor:pointer;
+	 position:relative;
+	 overflow:hidden;
+	 font-size: 15px;
+	}
+	span{
+	 background:#df8491;
+	 height:100%;
+	 width:0;
+	 border-radius:25px;
+	 position:absolute;
+	 left:0;
+	 bottom:0;
+	
+	 transition:0.5s;
+	 }
+	button:hover span{
+	 width:100%;
+	}
+	button hover{
+	 border:none;
+	}
+	.menu-bar{
+	text-align: center;
+}
+.menu-bar ul{
+	display: inline-flex;
+	list-style: none;
+}
+.menu-bar ul li a{
+	text-decoration: none;
+	color: black;
+}
+.sub-menu-1{
+	display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+	display: block;
+	position: absolute;
+	margin-top: 1px;
+	margin-left: -1px;
+	background: #e6dbdd;
+	text-decoration: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+	display: block;
+	margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+	width: 150px;
+	padding: 10px;
+	border-bottom: 1px dotted #111;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+	border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+	color: #e90b2c;
+}
+.sub-menu-2{
+	display: none;
+}
+.hover-me:hover .sub-menu-2{
+	position: absolute;
+	display: block;
+	margin-top: -39px;
+	margin-left: 140px;
+	background:#faf5f6;
+}
+
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding-top: 120px;
+            padding-left: 10%;
+            padding-right: 10%;
+            
+		}
+		.left{
+			flex-basis: 50%;
+		}
+		.right{
+			flex-basis: 40%;
+		}
+		.dsa{
+	margin-left: 250px;
+}
+.top{
+	background-color: black;
+}
+		.info{
+			background-color: #eee;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+		p{
+			font-family: 'Times New Roman', Times, serif;
+			font-size: 20px;
+		}
+		h2{
+			font-family: cursive;
+			font-size:25px ;
+		}
+		.achievements{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+            padding-top: 120px;
+		}
+		.achievement{
+			position: relative;
+			margin-bottom: 20px;
+			flex-basis: 30%;
+            overflow: hidden;
+            box-shadow: 0px 5px 10px #333;
+            transition-duration: 0.5s;
+		}
+		.achievement img{
+			width: 100%;
+            transition-duration: 0.5s;
+		}
+		.achievement:hover img{
+			transform: scale(1.1);
+		}
+		.achievement .overlay{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.6);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+		.achievement:hover .overlay{
+			opacity: 1;
+		}
+		.achievement h3{
+			color: #fff;
+			font-size: 24px;
+			margin: 0;
+		}
+		.achievement p{
+			color: #fff;
+			font-size: 16px;
+			margin: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="top">
+		<a href="https://presidencyuniversity.in/" target="_blank" ><img src="logo.png"   alt=""> </a>
+		<img src="DSALogo.jpg" height="150px" class="dsa">
+	</div>
+
+    <br><br>
+	<div class="menu-bar"><center>
+        <ul>
+        <li><a href="#"><button type="button"><span></span>HOME</button></a></li>
+        <li><a href="#"><button type="button"><span></span>ABOUT</button></a></li>
+        <li><a href="#"><button type="button"><span></span>CLUB</button></a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li class="hover-me"><a href="#">Social Club</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="#">NSS</a></li>
+                                <li><a href="#">NCC</a></li>
+                                <li><a href="#">Environmental</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="hover-me"><a href="#">Sports Club</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="#">Cricket Club</a></li>
+                                <li><a href="#">Football Club</a></li>
+                                <li><a href="#">Basketball Club</a></li>
+                                <li><a href="#">volleyball club</a></li>
+                                <li><a href="#">Indoor Club</a></li>
+                                <li><a href="#">kabaddi and kho-kho Club</a></li>
+                                <li><a href="#">martial arts Club</a></li>
+                                <li><a href="#">yoga and meditation Club</a></li>
+                                <li><a href="#">health and wellnes and fitness Club</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="hover-me"><a href="#">Educational Club</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="#">debate society Club</a></li>
+                                <li><a href="#">entrepreneurship cell Club</a></li>
+                                <li><a href="#">Literary Club</a></li>
+                                <li><a href="#">Quiz club</a></li>
+                                <li><a href="#">Android/Mobile App</a></li>
+                                <li><a href="#">Graphics and Animation</a></li>
+                                <li><a href="#">Gaming Club</a></li>
+                                <li><a href="#">Build Club</a></li>
+                                <li><a href="#">Toat Master</a></li>
+                                <li><a href="#">Data Science</a></li>
+                                <li><a href="#">Omega</a></li>
+                                <li><a href="#">Aerospace</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="hover-me"><a href="#">Cultural Club</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="#">Dance</a></li>
+                                <li><a href="#">Fashion</a></li>
+                                <li><a href="#">Theatrical Society</a></li>
+                                <li><a href="#">Standup Comedy</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="hover-me"><a href="#">Physical Club</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="#">Mental Health Awareness</a></li>
+                            </ul>
+                    </li>
+                    <li class="hover-me"><a href="#">Artistic Club</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="#">Art and Sketch</a></li>
+                                <li><a href="#">Culinary Club</a></li>
+                                <li><a href="#">Kannada Club</a></li>
+                                <li><a href="#">Photography club</a></li>
+                                <li><a href="#">Presidency Talks</a></li>
+                                <li><a href="#">Speaker and Anchor Club</a></li>
+                                <li><a href="#">Women Empowerment Club</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#"><button type="button"><span></span>LIFE @ PRESIDENCY</button></a></li>
+        </ul>
+       </center></div><br><br>
+	<div class="container">
+		<div class="left">
+			<div class="info">
+				<h2>Welcome to our website</h2>
+				<p>Rotaract (Rotary-in-action) club of Presidency
+College (Autonomous) (Re accredited by NAAC with A+ Grade) extends selfless
+services towards the society.
+Many like-minded people get together for the same cause and
+develop in every aspect possible be it individually, professionally or
+emotionally. Rotaract brings together people aged between 18-30
+to exchange ideas, develop leadership and professional skills, and have fun
+through service</p>
+<p>The Rotaract Club of Presidency College
+	(Autonomous) (RaCPC) works with its motto – Transcending horizons for
+	humanity. RaCPC believes
+	in working towards perfection with love,
+	compassion and empathy towards the society. Every member of
+	the club is inevitably a crucial part of the Rotaract family worldwide.</p>
+			</div>
+	</div>
+	<div class="right">
+		<img src="clubimg.jpeg" alt="Photo" width="500px";
+		height=400px;>
+</div>	
+			<div class="achievements">
+				<div class="achievement">
+					<img src="award-1.webp" alt="Achievement 1">
+					<div class="overlay">
+						<h3>Achievement 1</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+				</div>
+				<div class="achievement">
+					<img src="award-2.webp" alt="Achievement 2">
+					<div class="overlay">
+						<h3>Achievement 2</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+				</div>
+				<div class="achievement">
+					<img src="award-3.webp" alt="Achievement 3">
+					<div class="overlay">
+						<h3>Achievement 3</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+				</div>
+				<div class="achievement">
+					<img src="award-4.webp" alt="Achievement 4">
+					<div class="overlay">
+						<h3>Achievement 4</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</div>
+				</div>
+				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<center><h1 style="background-color: #df8491; font-family: cursive;">Event Archives</h1></center>
+<center><button type="button"><span></span><a href="event.html" style="color:black; font-size: 20px;">2021-2022</a></button></center>
+
+</body>
+</html>
